@@ -172,4 +172,11 @@ public class RadioTest {
         int actual = rad.getCurrentVolume();
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void sizeStation() {
+        Radio rad = new Radio(4);
+        Assertions.assertEquals(4, rad.getMaxStation() - rad.getMinStation() + 1);
+    }
+
 }
